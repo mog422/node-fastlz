@@ -329,7 +329,7 @@ function fastlz_compress(input) {
 function fastlz_decompress(input) {
   /* magic identifier for compression level */
   let level = (input[0] >> 5) + 1;
-console.log({level})
+
   if (level == 1) return fastlz1_decompress(input);
   if (level == 2) return fastlz2_decompress(input);
 
